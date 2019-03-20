@@ -13,6 +13,15 @@
 {% block app_title %}{{ tethys_app.name }}{% endblock %}
 
 {% block app_navigation_items %}
+  {% url 'arcgis:home' as home_url %}
+  {% url 'arcgis:shortestroute' as shortestroute_url %}
+
+
+  <li class="title">App Navigation</li>
+  <li class="{% if request.path == home_url %}active{% endif %}"><a href="{{ home_url }}">Buffer Service</a></li>
+  <li class="{% if request.path == shortestroute_url %}active{% endif %}"><a href="{{ shortestroute_url }}">Least Cost Path Service</a></li>
+
+
 {% endblock %}
 
 {% block app_content %}

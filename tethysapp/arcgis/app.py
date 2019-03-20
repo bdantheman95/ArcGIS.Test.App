@@ -29,6 +29,11 @@ class Arcgis(TethysAppBase):
                 url='arcgis',
                 controller='arcgis.controllers.home'
             ),
+            UrlMap(
+                name='shortestroute',
+                url='arcgis/shortestroute',
+                controller='arcgis.controllers.shortestroute'
+            ),
         )
 
 

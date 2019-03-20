@@ -35,7 +35,7 @@ require([
 
 	//a map with basemap
 	var map = new Map({
-    basemap: "streets-vector"
+    basemap: "terrain"
 	});
 
     //a graphics layer to show input point and output polygon
@@ -70,7 +70,7 @@ require([
         };
 
 	// Geoprocessing service url
-	var gpUrl = "http://geoserver2.byu.edu/arcgis/rest/services/brandon_roberts/BufferService/GPServer/Buffer%20Service";
+	var gpUrl = "http://geoserver2.byu.edu/arcgis/rest/services/JEFFShortestRoute/CalculateShortestRouteJEFF/GPServer/Calculate%20Shortest%20Route";
 
     // create a new Geoprocessor
 	var gp = new Geoprocessor(gpUrl);
@@ -135,6 +135,7 @@ require([
 });
 </script>
 <div id="viewDiv"></div>
+
 {% endblock %}
 
 {# Use the after_app_content block for modals #}
