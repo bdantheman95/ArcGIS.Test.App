@@ -15,11 +15,15 @@
 {% block app_navigation_items %}
   {% url 'arcgis:home' as home_url %}
   {% url 'arcgis:shortestroute' as shortestroute_url %}
+  {% url 'arcgis:areameasure' as areameasure_url %}
+
 
 
   <li class="title">App Navigation</li>
   <li class="{% if request.path == home_url %}active{% endif %}"><a href="{{ home_url }}">Buffer Service</a></li>
+  <li class="{% if request.path == areameasure_url %}active{% endif %}"><a href="{{ areameasure_url }}">Area Measurement Service</a></li>
   <li class="{% if request.path == shortestroute_url %}active{% endif %}"><a href="{{ shortestroute_url }}">Least Cost Path Service</a></li>
+
 
 
 {% endblock %}

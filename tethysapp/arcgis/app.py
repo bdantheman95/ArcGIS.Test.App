@@ -34,6 +34,11 @@ class Arcgis(TethysAppBase):
                 url='arcgis/shortestroute',
                 controller='arcgis.controllers.shortestroute'
             ),
+            UrlMap(
+                name='areameasure',
+                url='arcgis/areameasure',
+                controller='arcgis.controllers.areameasure'
+            ),
         )
 
 

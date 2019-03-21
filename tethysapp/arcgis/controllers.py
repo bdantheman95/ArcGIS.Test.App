@@ -19,3 +19,12 @@ def shortestroute(request):
     context = {}
 
     return render(request, 'arcgis/shortestroute.html', context)
+
+
+def areameasure(request):
+    """
+    Controller for the app home page.
+    """
+    context = {}
+
+    return render(request, 'arcgis/areameasure.html', context)
